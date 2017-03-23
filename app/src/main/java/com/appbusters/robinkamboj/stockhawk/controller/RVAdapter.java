@@ -8,11 +8,12 @@ import android.view.ViewGroup;
 
 import com.appbusters.robinkamboj.stockhawk.model.Data;
 
+import java.util.Collections;
 import java.util.List;
 
 public class RVAdapter extends RecyclerView.Adapter<View_Holder>{
 
-    private List<Data> data;
+    private List<Data> data = Collections.emptyList();
     private int rowLayout;
     private Context context;
 

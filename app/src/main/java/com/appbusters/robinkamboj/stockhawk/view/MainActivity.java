@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -36,6 +37,10 @@ public class MainActivity extends AppCompatActivity {
         layoutManager = new LinearLayoutManager(this);
         recyclerView = (RecyclerView) findViewById(R.id.recyclerview);
         adapter = new RVAdapter(data, R.layout.row_layout, getApplicationContext());
+        Log.e("RVA", "RVA");
+        recyclerView.setLayoutManager(layoutManager);
+        Log.e("RVA", "RVA");
+        recyclerView.setAdapter(adapter);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -49,6 +54,14 @@ public class MainActivity extends AppCompatActivity {
 
     private List<Data> fillWithData(){
         List<Data> data = new ArrayList<>();
+        data.add(new Data("YHOO", "Yahoo! Inc.", "0.143", "+46%"));
+        data.add(new Data("YHOO", "Yahoo! Inc.", "0.143", "+46%"));
+        data.add(new Data("YHOO", "Yahoo! Inc.", "0.143", "+46%"));
+        data.add(new Data("YHOO", "Yahoo! Inc.", "0.143", "+46%"));
+        data.add(new Data("YHOO", "Yahoo! Inc.", "0.143", "+46%"));
+        data.add(new Data("YHOO", "Yahoo! Inc.", "0.143", "+46%"));
+        data.add(new Data("YHOO", "Yahoo! Inc.", "0.143", "+46%"));
+        data.add(new Data("YHOO", "Yahoo! Inc.", "0.143", "+46%"));
         data.add(new Data("YHOO", "Yahoo! Inc.", "0.143", "+46%"));
         return data;
     }
