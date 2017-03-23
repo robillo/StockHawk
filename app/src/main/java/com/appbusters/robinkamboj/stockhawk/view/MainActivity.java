@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         layoutManager = new LinearLayoutManager(this);
         Log.e("RVA", "RVA");
         recyclerView.setLayoutManager(layoutManager);
-        
+
         adapter = new RVAdapter(data, R.layout.row_layout, getApplicationContext());
         Log.e("RVA", "RVA");
         recyclerView.setAdapter(adapter);
@@ -56,15 +56,11 @@ public class MainActivity extends AppCompatActivity {
 
     private List<Data> fillWithData(){
         List<Data> data = new ArrayList<>();
-        data.add(new Data("YHOO", "Yahoo! Inc.", "0.143", "+46%"));
-        data.add(new Data("YHOO", "Yahoo! Inc.", "0.143", "+46%"));
-        data.add(new Data("YHOO", "Yahoo! Inc.", "0.143", "+46%"));
-        data.add(new Data("YHOO", "Yahoo! Inc.", "0.143", "+46%"));
-        data.add(new Data("YHOO", "Yahoo! Inc.", "0.143", "+46%"));
-        data.add(new Data("YHOO", "Yahoo! Inc.", "0.143", "+46%"));
-        data.add(new Data("YHOO", "Yahoo! Inc.", "0.143", "+46%"));
-        data.add(new Data("YHOO", "Yahoo! Inc.", "0.143", "+46%"));
-        data.add(new Data("YHOO", "Yahoo! Inc.", "0.143", "+46%"));
+        data.add(new Data("YHOO", "Yahoo! Inc.", "45.89", "+0.28%"));
+        data.add(new Data("AAPL", "Apple Inc.", "141.09", "+0.89%"));
+        data.add(new Data("GOOG", "Alphabet Inc.", "831.03", "+0.13%"));
+        data.add(new Data("MSFT", "Microsoft Cooperation", "65.05", "+1.32%"));
+        data.add(new Data("FB", "Facebook, Inc.", "139.53", "+0.74%"));
         return data;
     }
 
