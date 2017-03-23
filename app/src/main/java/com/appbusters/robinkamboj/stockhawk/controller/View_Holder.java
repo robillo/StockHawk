@@ -8,7 +8,7 @@ import com.appbusters.robinkamboj.stockhawk.R;
 
 public class View_Holder extends RecyclerView.ViewHolder{
 
-    private TextView stock_symbol, stock_name, seeds, percent;
+    public TextView stock_symbol, stock_name, seeds, percent;
 
     public View_Holder(View itemView) {
         super(itemView);
