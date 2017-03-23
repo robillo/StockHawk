@@ -15,6 +15,7 @@ import com.appbusters.robinkamboj.stockhawk.R;
 import com.appbusters.robinkamboj.stockhawk.controller.RVAdapter;
 import com.appbusters.robinkamboj.stockhawk.model.Data;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -22,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private RVAdapter adapter;
     private LinearLayoutManager layoutManager;
-    List<Data> data;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        data = fillWithData();
+        List<Data> data = fillWithData();
 
         layoutManager = new LinearLayoutManager(this);
         recyclerView = (RecyclerView) findViewById(R.id.recyclerview);
@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private List<Data> fillWithData(){
+        List<Data> data = new ArrayList<>();
         data.add(new Data("YHOO", "Yahoo! Inc.", "0.143", "+46%"));
         return data;
     }
