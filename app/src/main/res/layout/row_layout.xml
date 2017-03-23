@@ -4,8 +4,9 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:cardCornerRadius="5sp"
-    app:cardElevation="5sp">
+    app:cardCornerRadius="3sp"
+    app:cardElevation="5sp"
+    android:layout_margin="5sp">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -26,11 +27,37 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5sp"
-            android:layout_margin="4sp"
+            android:layout_marginLeft="4sp"
             android:text="Yahoo! Inc."
             android:textSize="15sp"
             android:textColor="@color/colorBlackShade"
-            android:id="@+id/stock_name"/>
+            android:id="@+id/stock_name"
+            android:layout_below="@+id/stock_symbol"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5sp"
+            android:layout_margin="3sp"
+            android:text="45.56"
+            android:textSize="15sp"
+            android:textColor="@color/colorBlackShade"
+            android:id="@+id/seeds"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/percent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5sp"
+            android:layout_margin="3sp"
+            android:text="+0.63%"
+            android:textSize="15sp"
+            android:textColor="@color/colorBlackShade"
+            android:id="@+id/percent"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"/>
 
     </RelativeLayout>
 
