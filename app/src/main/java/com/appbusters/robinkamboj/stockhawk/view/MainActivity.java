@@ -34,11 +34,13 @@ public class MainActivity extends AppCompatActivity {
 
         List<Data> data = fillWithData();
 
-        layoutManager = new LinearLayoutManager(this);
         recyclerView = (RecyclerView) findViewById(R.id.recyclerview);
-        adapter = new RVAdapter(data, R.layout.row_layout, getApplicationContext());
+
+        layoutManager = new LinearLayoutManager(this);
         Log.e("RVA", "RVA");
         recyclerView.setLayoutManager(layoutManager);
+        
+        adapter = new RVAdapter(data, R.layout.row_layout, getApplicationContext());
         Log.e("RVA", "RVA");
         recyclerView.setAdapter(adapter);
 

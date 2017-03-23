@@ -15,18 +15,17 @@ public class RVAdapter extends RecyclerView.Adapter<View_Holder>{
 
     private List<Data> data = Collections.emptyList();
     private int rowLayout;
-    private Context context;
 
     public RVAdapter(List<Data> data, int rowLayout, Context context) {
         this.data = data;
         this.rowLayout = rowLayout;
-        this.context = context;
     }
 
     @Override
     public View_Holder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(rowLayout, parent, false);
-        return new View_Holder(v);
+        View_Holder holder = new View_Holder(v);
+        return holder;
     }
 
     @Override
@@ -39,6 +38,6 @@ public class RVAdapter extends RecyclerView.Adapter<View_Holder>{
 
     @Override
     public int getItemCount() {
-        return 0;
+        return data.size();
     }
 }
