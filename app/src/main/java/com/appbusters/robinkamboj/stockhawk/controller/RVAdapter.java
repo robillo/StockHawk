@@ -30,7 +30,10 @@ public class RVAdapter extends RecyclerView.Adapter<View_Holder>{
 
     @Override
     public void onBindViewHolder(View_Holder holder, int position) {
-
+        holder.stock_symbol.setText(data.get(position).getStock_symbol());
+        holder.stock_name.setText(data.get(position).getStock_name());
+        holder.seeds.setText(data.get(position).getSeeds());
+        holder.percent.setText(data.get(position).getPercent());
     }
 
     @Override
