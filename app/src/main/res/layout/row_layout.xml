@@ -54,8 +54,9 @@
             android:layout_margin="3sp"
             android:text="+0.63%"
             android:textSize="15sp"
-            android:textColor="@color/colorBlackShade"
+            android:textColor="@color/colorWhiteShade"
             android:id="@+id/percent"
+            android:background="@color/colorPositive"
             android:layout_centerVertical="true"
             android:layout_alignParentEnd="true"/>
 

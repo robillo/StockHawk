@@ -8,4 +8,7 @@
     <color name="colorBlackShade">#474747</color>
     <color name="colorBlackShade2">#7F7F7F</color>
     <color name="colorBlackShade3">#CCCBCA</color>
+
+    <color name="colorPositive">#33691E</color>
+    <color name="colorNegative">#B71C1C</color>
 </resources>
